@@ -65,6 +65,17 @@ res.json(data);
 
 
 })
+
+app.get('/get',async(req, res)=>{
+
+    const  data = await imageModel.find();
+    
+    res.json(data);
+    
+    
+    })
+
+
 app.get('/getUserID/:id',async(req, res)=>{
 
     const {id} = req.params;
